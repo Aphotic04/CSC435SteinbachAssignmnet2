@@ -1,0 +1,104 @@
+/*Background styles*/
+body {
+    max-height: 100vh;
+    background-color: rgb(168, 168, 168);
+}
+
+/*General font styles*/
+body, input {
+    font-size:20pt;
+}
+
+/*Display for parent element of tracking columns*/
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15vw;
+    margin: 30px;
+}
+
+/*Button for main page styles*/
+#trackingButtons, #addRemoveButtons {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*All button styles*/
+button {
+    margin: 1vh 3vw 1vh 3vw;
+    min-width: 6vw;
+    padding: .5vw;
+    font-size: 13pt;
+    border-radius: 5px;
+}
+
+/*Tracking column styles*/
+.trackingSection {
+    min-width: 20vw;
+    text-align: center;
+}
+
+/*Priority row styles*/
+.priorityDiv {
+    border: 2px solid black;
+    min-height: 24vh;
+    background-color: grey;
+}
+
+/*Task styles*/
+.task {
+    display: flex;
+    min-height: 50px;
+    max-height: fit-content;
+    justify-content: center;
+    align-items: center;
+    margin: 1vh .5vw 1vh .5vw;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+/*Edit form styles*/
+#form {
+    position: relative;
+    bottom: 90vh;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: lightgrey;
+    padding: 15px;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+/*Edit form font styles*/
+#form, input, textarea {
+    font-size:17pt;
+}
+
+/*Edit form element styles*/
+.formElement {
+    width: fit-content;
+    margin: 4vh auto 4vh auto;
+}
+
+/*Edit form radio styles*/
+.formElementRadio {
+    width: fit-content;
+    margin: 2vh auto 2vh auto;
+}
+
+/*Connects priority name to a color*/
+#highPriorityLabel {
+    padding: 4px;
+    background-color: lightpink;
+} 
+#midPriorityLabel {
+    padding: 4px;
+    background-color: lightyellow;
+} 
+#lowPriorityLabel {
+    padding: 4px;
+    background-color: lightgreen;
+}

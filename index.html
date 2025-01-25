@@ -1,0 +1,107 @@
+<!--
+Ty Steinbach
+CSC 435
+Created: 01-22-2025
+Last Edit: 01-22-2025
+
+Deliverables: 
+Code implementing a task list that is editable
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Task List</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <!--Buttons for moving the Tasks to different tracking columns-->
+        <div id="trackingButtons">
+            <button type="submit" value="start" id="btnStart">Start Task</button>
+            <button type="submit" value="finish" id="btnFinish">Finish Task</button>
+            <button type="submit" value="revert" id="btnRevert">Revert Task</button>
+        </div>
+        
+        <!--The three tracking columns and their priority rows-->
+        <main>
+            <section id="pending"  class="trackingSection">
+                Pending
+                <div id="pendingHigh" class="priorityDiv"></div>
+                <div id="pendingMid" class="priorityDiv"></div>
+                <div id="pendingLow" class="priorityDiv"></div>
+            </section>
+            <section id="inProgress"  class="trackingSection">
+                In Progress
+                <div id="inProgressHigh" class="priorityDiv"></div>
+                <div id="inProgressMid" class="priorityDiv"></div>
+                <div id="inProgressLow" class="priorityDiv"></div>
+            </section>
+            <section id="finished"  class="trackingSection">
+                Finished
+                <div id="finishedHigh" class="priorityDiv"></div>
+                <div id="finishedMid" class="priorityDiv"></div>
+                <div id="finishedLow" class="priorityDiv"></div>
+            </section>
+        </main>
+        
+        <!--Add and remove buttons-->
+        <div id="addRemoveButtons">
+            <button type="submit" value="add" id="btnAdd">Add</button>
+            <button type="submit" value="remove" id="btnRemove">Remove</button>
+        </div>
+    
+        <!--Form for editing the tasks-->
+        <section id="form" style="visibility:hidden;">
+            <form id="editForm" action="index.html">
+                <!--Task Id-->
+                <div class="formElement">
+                    <label for="numId">Id:</label>
+                    <input type="number" id="numId" name="numId" readonly>
+                </div>
+                
+                <!--Task Title-->
+                <div class="formElement">
+                    <label for="txtTitle">Title:</label>
+                    <input type="text" id="txtTitle" name="txtTitle">
+                </div>
+                
+                <!--Task Description-->
+                <div class="formElement">
+                    <label for="txaDescription">Description:</label>
+                    <textarea id="txaDescription" name="txtAreaDescription" rows="5" cols="25"></textarea>
+                </div>
+                
+                <!--Task Priority-->
+                Priority:
+                <div class="formElementRadio">
+                    <input type="radio" id="highPriority" name="optPriority" value="high">
+                    <label for="highPriority" id="highPriorityLabel">High</label> 
+                </div>
+                <div class="formElementRadio">
+                    <input type="radio" id="midPriority" name="optPriority" value="mid">
+                    <label for="midPriority" id="midPriorityLabel">Mid</label>
+                </div>
+                <div class="formElementRadio">
+                    <input type="radio" id="lowPriority" name="optPriority" value="low">
+                    <label for="lowPriority" id="lowPriorityLabel">Low</label>
+                </div>
+                
+                <!--Task Tracking-->
+                <div class="formElement">
+                    <label for="txtTracking">Tracking:</label>
+                    <input type="text" id="txtTracking" name="txtTTracking" readonly>
+                </div>
+                
+                <!--Confirm/Cancel Buttons-->
+                <div class="formElement">
+                    <button type="submit" value="confirm" id="btnConfirm">Confirm</button>
+                    <button type="submit" value="cancel" id="btnCancel">Cancel</button>
+                </div>
+                
+            </form>
+        </section>
+
+        <!--Referenced JS-->
+        <script src="script.js"></script>
+    </body>
+</html>
